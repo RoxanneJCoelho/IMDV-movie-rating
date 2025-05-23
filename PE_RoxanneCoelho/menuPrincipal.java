@@ -6,6 +6,7 @@ import java.util.Scanner;
 import static PE_RoxanneCoelho.menuAdmin.*;
 import static PE_RoxanneCoelho.menuCopyRight.*;
 import static PE_RoxanneCoelho.menuCliente.*;
+import static PE_RoxanneCoelho.loginMenuAdmin.*;
 
 public class menuPrincipal {
 
@@ -125,7 +126,7 @@ public class menuPrincipal {
 
             switch (opcaoPrimeiroMenu) {
                 case 1:
-                    menuAdmin();
+                    loginAdmin();
                     break;
                 case 2:
                     menuCliente();

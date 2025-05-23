@@ -1,45 +1,48 @@
 package PE_RoxanneCoelho;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import static PE_RoxanneCoelho.funcoesAdicionais.*;
+import static PE_RoxanneCoelho.menuPrincipal.*;
+
 public class loginMenuAdmin {
-    public static int contarLinhas(String caminho) throws FileNotFoundException {
 
-        File ficheiro = new File(caminho);
-        Scanner sc = new Scanner(ficheiro);
-
-        int contagemLinhas = 0;
-
-        while (sc.hasNextLine()) {
-            sc.nextLine();
-            contagemLinhas++;
+    public static boolean validacaoLogin(String[][] matriz, String utilizador, String password)  {
+        for (int linha = 0; linha < matriz.length; linha++) {
+            if (utilizador.equals(matriz[linha][0])  && password.equals(matriz[linha][1])) {
+                return true;
+            }
         }
-
-        return contagemLinhas;
+        return false;
 
     }
-    public static int contarColunas(String caminho) throws FileNotFoundException {
+    public static void loginAdmin() throws FileNotFoundException {
 
-        File ficheiro = new File(caminho);
-        Scanner sc = new Scanner(ficheiro);
+        Scanner input = new Scanner(System.in);
 
-        if (sc.hasNextLine()) {
-            String primeiraLinha = sc.nextLine();
+        String utilizador;
+        String password;
+        boolean login = true;
+        String [][] matriz = ficheiroParaMatriz("IMDV/IMDV_AdminLogin.csv");
 
-            String[] colunas = primeiraLinha.split(";");
-            return colunas.length;
-        } else {
-            // Se o ficheiro estiver vazio
-            return 0;
-        }
-    }
+        do {
+            System.out.println("Insira o seu nome de utilizador: ");
+            utilizador = input.next();
+            System.out.println("Insira a password: ");
+            password = input.next();
 
+            login = validacaoLogin(matriz, utilizador, password);
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(" Existem "+ contarLinhas("IMDV/IMDV.csv") + "linhas e " + contarColunas("IMDV/IMDV.csv") + "colunas");
+            if(login==false){
+                System.out.println("Nome e/ou utilizador incorretos. Tente novamente.");
+            }
+
+        } while (login==false);
+        System.out.println("Login realizado com sucesso!");
+        menuAdmin();
 
     }
 
 }
+

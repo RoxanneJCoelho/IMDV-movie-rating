@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+
+
 public class menuCopyRight {
     public static void copyRight(String ficheiro) throws FileNotFoundException {
         File ficheiroCopyright = new File(ficheiro);

@@ -17,7 +17,7 @@ public class loginMenuAdmin {
         return false;
 
     }
-    public static void loginAdmin() throws FileNotFoundException {
+    public static void loginAdmin(String caminho) throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
@@ -40,7 +40,7 @@ public class loginMenuAdmin {
 
         } while (login==false);
         System.out.println("Login realizado com sucesso!");
-        menuAdmin();
+        menuAdmin(caminho);
 
     }
 

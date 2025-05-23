@@ -60,7 +60,7 @@ public class funcoesAdicionais {
         // Enquanto houver linhas e colunas
         while (sc.hasNextLine()) {
             String linha = sc.nextLine();
-            String[] linhaSeparada = linha.split(",");
+            String[] linhaSeparada = linha.split(";");
 
             for (int i = 0; i < matrizCompleta[0].length; i++) {
                 matrizCompleta[numLinhaAtual][i] = linhaSeparada[i];

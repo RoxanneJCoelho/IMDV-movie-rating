@@ -10,7 +10,7 @@ import static PE_RoxanneCoelho.loginMenuAdmin.*;
 
 public class menuPrincipal {
 
-    public static void menuAdmin() {
+    public static void menuAdmin(String caminho) throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
@@ -28,10 +28,10 @@ public class menuPrincipal {
 
             switch (opcaoMenuAdmin) {
                 case 1:
-                    ConsultaFicheiro();
+                    ConsultaFicheiro(caminho);
                     break;
                 case 2:
-                    Ratings();
+                    Ratings(caminho);
                     break;
                 case 3:
                     Estudios();
@@ -47,7 +47,7 @@ public class menuPrincipal {
 
     }
 
-    public static void menuCliente() {
+    public static void menuCliente() throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
@@ -111,6 +111,7 @@ public class menuPrincipal {
 
     public static void primeiroMenu() throws FileNotFoundException {
 
+        String caminho = "IMDV/IMDV.csv";
         Scanner input = new Scanner(System.in);
 
         int opcaoPrimeiroMenu;
@@ -126,7 +127,7 @@ public class menuPrincipal {
 
             switch (opcaoPrimeiroMenu) {
                 case 1:
-                    loginAdmin();
+                    loginAdmin(caminho);
                     break;
                 case 2:
                     menuCliente();

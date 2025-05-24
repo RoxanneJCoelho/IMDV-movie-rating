@@ -10,11 +10,19 @@ import static PE_RoxanneCoelho.loginMenuAdmin.*;
 
 public class menuPrincipal {
 
+    /**
+     * Função para imprimir o menuAdmin e invocar as suas respetivas funções
+     *
+     * @param caminho Caminho para o ficheiro a ser carregado
+     * @throws FileNotFoundException Caso o ficheiro não seja encontrado
+     */
     public static void menuAdmin(String caminho) throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
         int opcaoMenuAdmin;
+
+        // mostra o menu até o utilzador carregar em 4 (sair)
 
         do {
             System.out.println("\n------ Bem vind@ ao Menu Admin do IMDV ------");
@@ -47,11 +55,19 @@ public class menuPrincipal {
 
     }
 
+    /**
+     * Função para imprimir o menuCliente e invocar as suas respetivas funções
+     *
+     * @throws FileNotFoundException Caso o ficheiro não seja encontrado
+     */
+
     public static void menuCliente() throws FileNotFoundException {
 
         Scanner input = new Scanner(System.in);
 
         int opcaoMenuCliente;
+
+        // mostra o menu até o utilzador carregar em 10 (sair)
 
         do {
             System.out.println("------ Bem vind@ ao Menu Cliente do IMDV ------");
@@ -108,13 +124,19 @@ public class menuPrincipal {
 
     }
 
-
+    /**
+     * Função para imprimir o primeiro Menu que aparece ao executar o programa e invocar as suas respetivas funções
+     *
+     * @throws FileNotFoundException Caso o ficheiro não seja encontrado
+     */
     public static void primeiroMenu() throws FileNotFoundException {
 
         String caminho = "IMDV/IMDV.csv";
         Scanner input = new Scanner(System.in);
 
         int opcaoPrimeiroMenu;
+
+        // mostra o menu até o utilzador carregar em 3 (sair)
 
         do {
             System.out.println("\n------ Bem vind@ ao IMDV ------");
@@ -133,18 +155,18 @@ public class menuPrincipal {
                     menuCliente();
                     break;
                 case 3:
-                    System.out.println("A sair do programa...");
-                    copyRight("IMDV/IMDV_Copyright.txt");
+                    System.out.println("\nA sair do programa...");
+                    copyRight("IMDV/IMDV_Copyright.txt"); // mostra o ficheiro do copyright com o nome da desenvolvedora deste programa
                     break;
                 default:
-                    System.out.println("Opção Inválida!");
+                    System.out.println("\nOpção Inválida!");
             }
 
         } while (opcaoPrimeiroMenu != 3);
 
     }
 
-
+    // executa o programa
     public static void main(String[] args) throws FileNotFoundException {
         primeiroMenu();
 

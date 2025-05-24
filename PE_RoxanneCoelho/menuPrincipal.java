@@ -17,13 +17,13 @@ public class menuPrincipal {
         int opcaoMenuAdmin;
 
         do {
-            System.out.println("------ Bem vind@ ao Menu Admin do IMDV ------");
+            System.out.println("\n------ Bem vind@ ao Menu Admin do IMDV ------");
             System.out.println("1 - Consulta de ficheiros");
             System.out.println("2 - Total de Ratings");
             System.out.println("3 - Imprimir estúdios");
             System.out.println("4 - Sair");
 
-            System.out.print("Insira uma opção: ");
+            System.out.print("\nInsira uma opção: ");
             opcaoMenuAdmin = input.nextInt();
 
             switch (opcaoMenuAdmin) {
@@ -37,10 +37,10 @@ public class menuPrincipal {
                     Estudios();
                     break;
                 case 4:
-                    System.out.println("A sair do programa...");
+                    System.out.println("\nA sair do programa...");
                     break;
                 default:
-                    System.out.println("Opção Inválida!");
+                    System.out.println("\nOpção Inválida!");
             }
 
         } while (opcaoMenuAdmin != 4);
@@ -117,12 +117,12 @@ public class menuPrincipal {
         int opcaoPrimeiroMenu;
 
         do {
-            System.out.println("------ Bem vind@ ao IMDV ------");
+            System.out.println("\n------ Bem vind@ ao IMDV ------");
             System.out.println("1 - Menu Admin");
             System.out.println("2 - Menu Cliente");
             System.out.println("3 - Sair");
 
-            System.out.print("Insira uma opção: ");
+            System.out.print("\nInsira uma opção: ");
             opcaoPrimeiroMenu = input.nextInt();
 
             switch (opcaoPrimeiroMenu) {

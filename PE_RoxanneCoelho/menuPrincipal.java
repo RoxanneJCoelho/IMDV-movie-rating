@@ -70,7 +70,7 @@ public class menuPrincipal {
         // mostra o menu até o utilzador carregar em 10 (sair)
 
         do {
-            System.out.println("------ Bem vind@ ao Menu Cliente do IMDV ------");
+            System.out.println("\n------ Bem vind@ ao Menu Cliente do IMDV ------");
             System.out.println("1 - Novo Registro");
             System.out.println("2 - Imprimir Catálogo");
             System.out.println("3 - Imprimir Catálogo Gráfico");
@@ -82,7 +82,7 @@ public class menuPrincipal {
             System.out.println("9 - Imprimir Catálogo por Categoria");
             System.out.println("10 - Sair");
 
-            System.out.print("Insira uma opção: ");
+            System.out.print("\nInsira uma opção: ");
             opcaoMenuCliente = input.nextInt();
 
             switch (opcaoMenuCliente) {

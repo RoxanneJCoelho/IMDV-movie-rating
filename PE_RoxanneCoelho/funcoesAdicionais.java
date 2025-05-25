@@ -49,8 +49,7 @@ public class funcoesAdicionais {
             String primeiraLinha = sc.nextLine(); // a primeira linha vai ser lida
             String[] colunas = primeiraLinha.split(";"); // vamos "cortar" essa linha pelo delimitador das colunas, neste caso é o ponto e vírgula
             return colunas.length; // o comprimento do array é o número de colunas
-        } else {
-            // Se o ficheiro tiver vazio
+        } else { // se o ficheiro tiver vazio devolve 0 (0 linhas)
             return 0;
         }
     }

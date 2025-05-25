@@ -278,7 +278,7 @@ public class menuCliente {
 
                 // se não for duplicado, imprimimos o nome do estudio e os respetivos filmes
                 if (duplicado==false) {
-                    System.out.println("_" + estudio + "_");
+                    System.out.println("_ " + estudio + " _");
 
                     // por cada linha da matriz, se o filme for da categoria e estúdio pretendidos, imprimimos
                     for (int j = 0; j < matriz.length; j++) {
